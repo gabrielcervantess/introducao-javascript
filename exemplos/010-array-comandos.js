@@ -32,20 +32,57 @@ do {
     opcao = entrada('Selecione uma opção:');
 
     if (opcao == 1) {
-        
-        
-
+        console.log('---');
+        console.log('Tarefas pendentes:');
+        console.log('---');
+        for (const i in tarefas) {
+            if (tarefas[i].realizada == false) {  
+                console.log('ID: ' + tarefas[i].id);
+                console.log('TAREFA: ' + tarefas[i].tarefa);
+                console.log('REALIZADA: ' + (!tarefas[i].realizada ? 'Não' : 'Sim'));
+                console.log('---');
+            }
+        }
     }
 
     if (opcao == 2) {
-        
+        console.log('---');
+        console.log('Tarefas realizadas:');
+        console.log('---');
+        for (const i in tarefas) {
+            if (tarefas[i].realizada == true) {
+            console.log('ID: ' + tarefas[i].id);
+            console.log('TAREFA: ' + tarefas[i].tarefa);
+            console.log('REALIZADA: ' + (tarefas[i].realizada ? 'Sim' : 'Não'));
+            console.log('---');
+        }
     }
+}
 
     if (opcao == 3) {
-        
-    }
+        const idCad = tarefas.length + 1;
+        const tarefa = entrada('Digite a tarefa a ser realizada: ');
+        const ibjAdd,
+        tarefa: tarefa,
+        realizada: false
+    };
+    tarefas.push(objAdd);
+    console.log('Tarefa adicionada com sucesso!');
+    console.log('');
+    entrada('Pressione enter para continuar:');
+
+
 
     if (opcao == 4) {
+        console.log('Tarefas a serem concluídas:');
+        for (const i in tarefas) {
+            if (!tarefas[i].realizada) {
+                console.log(tarefas[i].id + '- ' + tarefas[i].tarefas);
+            }
+        }
+        const tConcluir = parseInt(entrada('Digite o ID da tarefa que será concluída: ')) - 1;
+
+        const objAtualizar = 
         
     }
 
@@ -53,7 +90,7 @@ do {
         
     }
 
-} while (opcao != 0); 
+ } while (opcao != 0); 
 
 console.log('Programa encerrado!');
 entrada();
