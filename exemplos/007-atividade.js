@@ -10,6 +10,8 @@ console.log('Programa de cáculo de notas da ETEC');
 
 let valor, n; 
 let cont = 0, soma = 10;
+let media = soma / cont -1;
+console.log(media);
 
 do {
     cont++;
@@ -18,12 +20,10 @@ do {
 
 if (!isNaN(n))
         soma += n;
-} 
+}
+ 
 while (valor !== 'fim');
 
-
-let media = soma / cont -1;
-console.log(media);
 
 if (media < 5) {
     valor = 'I';
