@@ -86,16 +86,23 @@ do {
         }
         const tConcluir = parseInt(entrada('Digite o ID da tarefa que será concluída: ')) - 1;
 
-        const objAtualizar = {
-            id: tarefas[tConcluir].id, 
-            tarefa: tarefas[tConcluir].tarefa, 
-            realizada: true              
-        }
-        tarefas[tConcluir] = objAtualizar;
+        if (tConsluir < 0 || tConcluir > tarefas.length) {
 
-        console.log('');
-        console.log('Tarefa concluída com sucesso!');
-        entrada('Pressione enter para continuar:'); 
+            console.log('ID Inválido!')
+        }
+        else {
+            const objAtualizar = {
+                id: tarefas[tConcluir].id, 
+                tarefa: tarefas[tConcluir].tarefa, 
+                realizada: true              
+            }
+            tarefas[tConcluir] = objAtualizar;
+    
+            console.log('');
+            console.log('Tarefa concluída com sucesso!');
+            entrada('Pressione enter para continuar:'); 
+        }
+
     }
 
     if (opcao == 5) {
